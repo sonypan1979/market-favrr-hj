@@ -1,0 +1,16 @@
+overwrite: true
+schema: 
+  - ${GRAPHQL_URL}
+  - "./src/graphql/local/local-schema.graphql"
+documents: 
+  - "src/graphql/**/*.graphql"
+  - "src/graphql/**/*.ts"
+generates:
+  generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+  generated/graphql.schema.json:
+    plugins:
+      - "introspection"

@@ -1,0 +1,95 @@
+@import "../../style/color.scss";
+@import "../../style/responsive.scss";
+
+.connect-wallet-modal {
+  margin: auto;
+  @include responsive(width, 343px, null, 448px);
+  box-sizing: border-box;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $gray-darker;
+  border: 1px solid $gray-darker;
+  border-radius: 20px;
+
+  padding: 56px 28px;
+  
+  .learn-more {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .modal-header {
+      display: flex;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .modal-title {
+        color: $almost-white;
+        font-size: 32px;
+        @media (max-width: 350px) {
+            font-size: 26px;
+        }
+    }
+
+.modal-subtitle {
+    color: $gray-lighter;
+    font-weight: 600;
+    font-size: 16px;
+        margin-bottom: 40px;
+  }
+
+  .text-link {
+      color: $blue;
+  }
+
+  .disclaimer {
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray;
+    margin-top: 34px;
+  }
+
+  .close-button {
+    padding: 8px;
+    box-sizing: content-box;
+    border: 2px solid $gray-dark; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin: auto;
+    margin-right: 0px;
+  }
+
+  .close-button:hover {
+    border-color: $almost-white;
+    filter: brightness(2);
+  }
+}
+.wallet-provider-button {
+    display: flex;
+    padding: 14px 28px;
+    background-color: $gray-darkest;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid transparent;
+    height: 72px;
+
+    .button-label {
+        margin: auto;
+        font-weight: bold;
+        font-size: 16px;
+        color: $almost-white;
+        font-family: poppins;
+    }
+
+    .wallet-icon {
+        margin: auto 0px;
+    }
+}
+
+.wallet-provider-button:hover {
+    border-color: $gray-dark;
+}

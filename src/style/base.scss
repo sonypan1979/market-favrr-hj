@@ -1,0 +1,74 @@
+@import "./color.scss";
+@import "./responsive.scss";
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: poppins;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@include responsive-hover("a") {
+    color: $blue !important;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: DM Sans;
+}
+button:disabled {
+    cursor: default;
+}
+
+button:focus {
+    outline: none;
+}
+
+.action-button {
+    border-radius: 999px;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    width: 140px;
+}
+
+.blue-button {
+    background-color: $blue;
+    color: $almost-white;
+}
+
+.blue-button:hover {
+    background-color: #315EC9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+:root {
+    @include responsive(--screen-padding, 32px, 56px, 0px);
+    @media (max-width: 360px) {
+        --screen-padding: 7px;
+    }
+};
+
+.block-scroll {
+    overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}

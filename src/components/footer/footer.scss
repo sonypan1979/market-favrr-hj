@@ -1,0 +1,160 @@
+@import "../../style/sizes.scss";
+@import "../../style/color.scss";
+@import "../../style/responsive.scss";
+
+.footer {
+  @include responsive(padding-top, 40px, null, 80px);
+  border-top: 1px solid $gray-dark;
+  background-color: $gray-darkest;
+  text-transform: capitalize;
+
+  a:hover {
+    color: white !important;
+  }
+
+  .links-section {
+    display: flex;
+    padding-left: $screen-padding;
+    padding-right: $screen-padding;
+    @include max-width-auto-padding();
+    @include responsive(flex-direction, column, null, row);
+    @include responsive(padding-bottom, 32px, null, 48px);
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+
+    .footer-section-title {
+      font-weight: 500;
+      @include mobile-only {
+        font-weight: 600;
+      }
+    }
+    a:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .accordion-item.first-item {
+    margin-top: 40px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .section:first-child {
+    .footer-section-title {
+      margin-bottom: 8px;
+    }
+  }
+
+  .footer-section-title {
+    line-height: 24px;
+    display: flex;
+  }
+
+  .chevron {
+    @include responsive(display, unset, null, none);
+    margin-left: auto;
+    margin-right: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease-out;
+  }
+
+  .accordion.collapsed {
+    .chevron {
+      transform: rotate(0deg);
+    }
+  }
+
+  .accordion.expanded {
+    .chevron {
+      transform: rotate(90deg);
+    }
+  }
+
+  .footer-title {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    @include responsive(max-width, unset, null, 192px);
+  }
+
+  .accordion-item {
+    color: $gray;
+    font-weight: 700;
+    font-family: DM Sans;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .accordion-item:hover {
+    color: white !important;
+  }
+
+  hr {
+    border-top: none;
+    border-width: 1px;
+    border-color: $gray-dark;
+  }
+
+  .bottom-section {
+    padding: 35px 0px;
+    padding-left: $screen-padding;
+    padding-right: $screen-padding;
+    @include max-width-auto-padding();
+    text-transform: none;
+    font-size: 12px;
+    color: $gray;
+    display: flex;
+    @include mobile-only {
+      flex-direction: column-reverse;
+      padding: 25px 0px;
+    }
+
+    a {
+      display: inline-block;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: $gray;
+    }
+  }
+
+  .copyrights-label {
+    margin-right: 40px;
+    @media (max-width: 670px) {
+      margin-right: 20px;
+    }
+    @include mobile-only {
+      margin: auto;
+    }
+  }
+
+  .terms-privacy-container {
+    @include mobile-only {
+      margin: auto;
+      margin-bottom: 24px;
+    }
+  }
+
+  .social-media-bar {
+    margin: auto;
+    margin-right: 0px;
+    @include mobile-only {
+      margin: auto;
+      margin-bottom: 24px;
+    }
+  }
+
+  .accordion-hr {
+    margin: 32px 0px;
+    display: none;
+    @include mobile-only {
+      display: unset;
+    }
+  }
+
+}

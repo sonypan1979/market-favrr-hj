@@ -1,0 +1,32 @@
+@import "../style/color.scss";
+@import "../style/sizes.scss";
+@import "../style/responsive.scss";
+
+.base-page {
+    background-color: $gray-darkest;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .base-page-content {
+        flex-grow: 1;
+        min-height: 300px;
+
+        max-width: calc(100vw - 2*#{$screen-padding});
+        margin: 0px auto;
+
+        @include responsive(padding-top, 50px, 72px, 96px);
+        @include responsive(padding-bottom, 50px, 72px, 96px);
+        padding-left:  $screen-padding;
+        padding-right:  $screen-padding;
+        @include max-width-auto-padding();
+        position: relative;
+    }
+
+    .header-container {
+        z-index: 30;
+        position: sticky;
+        top: 0px;
+    }
+}

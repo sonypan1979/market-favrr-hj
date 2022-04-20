@@ -1,0 +1,40 @@
+@import "../../style/color.scss";
+
+.order-type-toggle {
+  padding: 4px;
+  background-color: $gray-darkest;
+  border-radius: 100px;
+  display: inline-block;
+  button {
+    max-width: 50%;
+    font-weight: bold;
+    color: #9395A4;
+    width: 158px;
+    height: 48px;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s color ease-out;
+  }
+  
+  button:hover, .active-tab {
+    color: $almost-white;
+  }
+
+  .active-button-background {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background-color: $gray-dark;
+    border-radius: 100px;
+    width: 50%;
+    height: 100%;
+
+    transition: 0.5s left ease-out;
+    // transition-delay: 3s color;
+  }
+
+  .inner-container {
+    position: relative;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../style/color.scss";
+
+.exclusive-picker {
+  display: inline-flex;
+  gap: 8px;
+  .option-button {
+    font-weight: 500;
+    font-size: 14px;
+    color: #777E90;
+    border-radius: 99px;
+    padding: 6px 12px;
+    font-family: Poppins;
+  }
+  
+  .option-button.active:not(:disabled), .option-button:hover:not(:disabled) {
+    background-color: $blue;
+    color: $almost-white;
+  }
+
+  .option-button:disabled {
+    color: $gray-dark;
+  }
+}

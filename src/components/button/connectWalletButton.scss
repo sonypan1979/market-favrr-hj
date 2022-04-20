@@ -1,0 +1,16 @@
+@import "../../style/color.scss";
+
+.connect-wallet-button {
+  border-radius: 99px;
+  background-color: $blue;
+  color: white;
+  height: 40px;
+  font-weight: bold;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: DM Sans;
+}
+
+.connect-wallet-button:hover {
+  background-color: #315EC9
+}

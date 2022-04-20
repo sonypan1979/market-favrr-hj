@@ -1,0 +1,139 @@
+@import "../../style/color.scss";
+
+.activity-panel {
+  .load-more-container {
+    text-align: center;
+    margin-top: 24px;
+  }
+}
+
+.activity-panel-item:nth-child(2n+1) {
+  background-color: $gray-darker;
+}
+.activity-panel-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 16px 20px;
+  border-radius: 20px;
+  color: $gray-lighter;
+  margin-bottom: 16px;
+
+  .userthumb {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin: auto;
+    margin-right: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: $blue;
+    border-radius: 99%;
+
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .userthumb.favrr-action {
+    padding: 0px;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .event-description {
+    grid-column: 2 / 3;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: auto;
+  }
+
+  .time-since {
+    grid-column: 2 / 3;
+    color: $gray;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .shares-label, .price-label {
+    font-weight: 500;
+    color: $almost-white;
+  }
+
+  .coin-label {
+    color: $blue;
+    font-weight: 500;
+  }
+}
+
+.empty-activity-panel {
+  text-align: center;
+  max-width: 424px;
+  margin: 0px auto;
+  padding: 70px 0px;
+
+  .title {
+    margin-top: 0px;
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: $almost-white;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray;
+  }
+
+  .shares-label {
+    color: $almost-white;
+    font-weight: 500;
+  }
+
+  .learn-more {
+    color: $blue;
+  }
+
+  .action-button {
+    margin-top: 40px;
+    width: 311px;
+  }
+}
+
+.activity-panel-tabs {
+  .activity-tab {
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px 12px;
+    color: $gray;
+    margin-bottom: 32px;
+    text-transform: capitalize;
+  }
+  .activity-tab.active-tab, .activity-tab:hover {
+    color: $almost-white;
+    background-color: $gray-dark;
+    border-radius: 999px;
+  }
+
+  .order-book-tab {
+    display: inline-flex;
+    align-items: center;
+    .tooltip {
+      display: flex;
+      margin-left: 4px;
+    }
+    img:hover {
+      filter: brightness(2)
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

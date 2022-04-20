@@ -1,0 +1,17 @@
+@import "../../style/color.scss";
+
+.order-status-label.pending {
+  color: $blue;
+}
+
+.order-status-label.filled, .order-status-label.completed {
+  color: $green;
+}
+
+.order-status-label.withdrawn {
+  color: $lilac;
+}
+
+.order-status-label.failed {
+  color: $pink;
+}
